@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+}
+.container {
+  margin: 0;
+  width: 1334px;
+}
+
+.box {
+  border: 1px solid #222;
+  border-radius: 10px;
+  background-color: #999;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.l-header {
+  display: flex;
+  padding: 0 40px;
+  margin: 10px 77px;
+}
+
+.l-header-logo {
+  width: 90px;
+}
+
+.l-header-menu {
+  display: none;
+}
+
+.l-header-weather {
+  width: 270px;
+  flex: 1;
+}
+
+.section--list {
+  display: flex;
+  gap: 20px;
+  padding: 0 40px;
+  margin: 10px 77px;
+  width: 1100px;
+}
+.list {
+  width: 263px;
+  height: 100px;
+}
+.main {
+  padding: 0 40px;
+  margin: 10px 77px;
+  width: 1100px;
+}
+.article {
+  width: 1100px;
+  padding: 0 40px;
+  margin: 10px 77px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.article--story {
+  width: 168px;
+  height: 235px;
+}
+@media (min-width: 960px) {
+}
