@@ -35,14 +35,20 @@ body {
 .l-header {
   display: flex;
 }
+/* Logo */
 
 .l-header-logo {
   width: 90px;
+  margin-right: 8px;
 }
+
+/* Menu */
 
 .l-header-menu {
   display: none;
 }
+
+/* Weather */
 
 .l-header-weather {
   width: 220px;
@@ -58,16 +64,28 @@ body {
   flex-direction: column;
 }
 
+/* Bar */
+
 .l-header-bar {
   width: 70px;
 }
 
-.main {
-  width: 100%;
+/* Main */
+
+.main-topic {
   margin-top: 10px;
   margin-bottom: 10px;
-  height: 330px;
+  position: relative;
 }
+.main-title {
+  position: absolute;
+}
+.main-img {
+  height: 330px;
+  width: 100%;
+}
+
+/* Section */
 
 .section--list {
   display: none;
@@ -77,23 +95,7 @@ body {
   width: 100%;
 }
 
-.main--article {
-  display: flex;
-  width: 100%;
-  background-color: white;
-  height: 2100px;
-}
-
-.main--article__section {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
-}
-
-.main--article__section1 {
-  display: none;
-}
+/* Story */
 
 .section--grid {
   overflow: scroll;
@@ -105,39 +107,19 @@ body {
   width: 2000px;
   display: flex;
 }
+
 .storys {
   display: flex;
   gap: 15px;
   border-radius: 10px;
 }
+
 .grid {
   background-color: aquamarine;
   width: calc(49vw - 75px / 2);
   height: 235px;
   overflow: hidden;
   position: relative;
-}
-
-.interview {
-  display: grid;
-  gap: 10px;
-  background-color: white;
-  margin-top: 10px;
-}
-.interview-box {
-  height: 200px;
-  background-color: greenyellow;
-}
-.interview--live {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  background-color: white;
-}
-
-.interview-box1 {
-  width: 100%;
-  height: 400px;
 }
 
 .story-img {
@@ -168,6 +150,50 @@ body {
   height: 100px;
 }
 
+/* Medee */
+
+.main--article {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  height: 2100px;
+}
+
+.main--article__section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.main--article__section1 {
+  display: none;
+}
+
+/* Live */
+
+.interview {
+  display: grid;
+  gap: 10px;
+  background-color: white;
+  margin-top: 10px;
+}
+.interview-box {
+  height: 200px;
+  background-color: greenyellow;
+}
+.interview--live {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  background-color: white;
+}
+
+.interview-box1 {
+  width: 100%;
+  height: 400px;
+}
+
 @media (min-width: 640px) {
   .grid {
     width: calc(33vw - 90px / 3);
@@ -195,7 +221,21 @@ body {
   }
 
   .main {
-    width: 100%;
+  }
+
+  .main-img {
+    width: 50vw;
+    height: 385px;
+  }
+  .main-topic {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 20px 20px;
+  }
+  .main-title {
+    width: 50vw;
+    height: 385px;
   }
 
   .main--article {
@@ -259,12 +299,15 @@ body {
     grid-row-start: 1;
     grid-row-end: 3;
   }
+
   .l-header-menu {
     display: flex;
     flex: 1;
     height: 50px;
   }
+
   .menu--box {
+    /* display: flex; */
   }
   .material-symbols-outlined {
     display: flex;
@@ -297,7 +340,7 @@ body {
 
   .dropdown {
     position: relative;
-    /* display: inline-block; */
+    background-color: white;
   }
 
   .dropdown-content a:hover {
