@@ -36,10 +36,10 @@
             <div class="box">
               <div class="is-flex mb-4">
                 <input
-                  id="oroltNumber"
+                  id="orolt"
                   class="input is-large"
                   type="text"
-                  placeholder="oroltNumber"
+                  placeholder="orolt"
                 />
                 <button
                   class="button is-primary is-large"
@@ -57,14 +57,43 @@
 
     <script>
       function doSomething() {
-        const i = Number(document.getElementById("oroltNumber").value);
-        var result = "";
-        for (let i = 1; i <= oroltNumber; i++) {
-          if (i % 2 == 0) {
-            console.log(i);
-            result = result + i;
-          }
+        const num = Number(document.getElementById("orolt").value);
+
+        let i = "";
+
+        // if (num > 1000) {
+        //   num * num == result;
+        //   result = num + result;
+        // }
+
+        for (result = num; result <= 1000; ) {
+          result = result * num;
+          console.log(result);
         }
+        if (num > 1000) {
+          ("hetresen");
+        }
+        if (num < 1) {
+          (" bolomjgui");
+        }
+
+        // while (i <= oroltNumber) {
+        //   result = result + i;
+        //   console.log(i);
+        //   i++;
+        // }
+
+        // for (let i = 1; i <= oroltNumber; i++) {
+        //   result = result + i;
+        //   console.log(i);
+        // }
+
+        // for (let i = 1; i <= oroltNumber; i++) {
+        //   if (i % 2 == 0) {
+        //     console.log(i);
+        //     result = result + i;
+        //   }
+        // }
 
         document.getElementById("garalt").innerText = result;
       }
