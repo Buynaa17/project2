@@ -36,11 +36,12 @@
             <div class="box">
               <div class="is-flex mb-4">
                 <input
-                  id="orolt"
+                  id="year"
                   class="input is-large"
                   type="text"
-                  placeholder="orolt"
+                  placeholder="year"
                 />
+
                 <button
                   class="button is-primary is-large"
                   onclick="doSomething();"
@@ -57,44 +58,30 @@
 
     <script>
       function doSomething() {
-        const num = Number(document.getElementById("orolt").value);
+        let input = document.getElementById("year").value;
 
-        // if (num > 1000) {
-        //   num * num == result;
-        //   result = num + result;
-        // }
-        counter = 0;
+        const values = input.split("");
 
-        for (result = num; result <= 1000; ) {
-          result = result * num;
-          counter = counter + 1;
-          console.log(result);
-        }
-        result = num + " iin " + counter + " zereg ni " + 1024 + " baina";
+        a = [1, 2, 3];
 
-        if (num > 1000) {
-          result = " hetresen";
-        }
-        if (num < 1) {
-          result = " bolomjgui";
+        a[0];
+        a[1];
+
+        let sum = 1;
+
+        4456;
+        sum = Number(values[0]) * Number(values[1]);
+
+        for (let i = 0; i < values.length; i++) {
+          sum = Number(values[i]) * sum;
         }
 
-        // while (i <= oroltNumber) {
-        //   result = result + i;
-        //   console.log(i);
-        //   i++;
-        // }
+        let result = sum;
 
-        // for (let i = 1; i <= oroltNumber; i++) {
-        //   result = result + i;
-        //   console.log(i);
-        // }
-
-        // for (let i = 1; i <= oroltNumber; i++) {
-        //   if (i % 2 == 0) {
-        //     console.log(i);
-        //     result = result + i;
-        //   }
+        // let i = 0;
+        // for (let i = 0; i < sum; ) {
+        //   console.log(sum);
+        //   result = result * sum;
         // }
 
         document.getElementById("garalt").innerText = result;
