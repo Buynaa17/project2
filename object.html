@@ -44,41 +44,22 @@
     <script>
       function doSomething() {
         let input = document.getElementById("year").value;
+        document.getElementById("garalt").innerText = result;
 
-        if (input && input.length > 0) {
-          let reservedString = "";
-          for (let i = input.length - 1; i >= 0; i--) {
-            revervedString = revervedString + input[i];
-            result = reservedString;
-          }
-        } else {
-          result = "uuchlaarai";
+        const date = {
+          year: "2000",
+          month: "7",
+          day: "14",
+          time: "5",
+          minut: "14",
+          second: "45",
+        };
+
+        if (date) {
+          console.log(date);
+          result = date;
         }
       }
-      document.getElementById("garalt").innerText = result;
-      // if (input.length === 2 && !isNaN(input)) {
-      //   too0 = Number(input[0]);
-      //   too1 = Number(input[1]);
-
-      //   result = too0 * too1;
-      //   console.log(result);
-      // } else {
-      //   ("3 orontoi too oruulnuu");
-      // }
-
-      // for (let i = 0; i < values.length; i++) {
-      //   sum = Number(values[i]) * sum;
-      // }
-
-      // let result = sum;
-
-      // sum = Number(values[0]) * Number(values[1]);
-      // const values = input.split("");
-      // let i = 0;
-      // for (let i = 0; i < sum; ) {
-      //   console.log(sum);
-      //   result = result * sum;
-      // }
     </script>
   </body>
 </html>
