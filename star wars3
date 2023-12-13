@@ -44,16 +44,14 @@
     <script>
       function doSomething() {
         let input = Number(document.getElementById("year").value);
-
         let result = "";
 
-        for (let k = 0; k < input; k++) {
-          result = result + "* ";
-          for (let i = 0; i < input; i++) {}
-          result = result + "\n";
-          if ((result = result + "")) {
-            result = result + "";
+        for (let k = input - 1; k >= 0; k--) {
+          for (let i = 0; i < input - k; i++) {
+            result = result + " *";
           }
+
+          result = result + "\n";
         }
 
         document.getElementById("garalt").innerText = result;

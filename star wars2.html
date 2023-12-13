@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html
+  class="has-background-link-light"
+  xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div
+            class="is-flex is-flex-direction-column is-justify-content-center"
+            style="height: 100vh"
+          >
+            <div class="box">
+              <div class="is-flex mb-4">
+                <input
+                  id="year"
+                  class="input is-large"
+                  type="text"
+                  placeholder="year"
+                />
+
+                <button
+                  class="button is-primary is-large"
+                  onclick="doSomething();"
+                >
+                  Бодох
+                </button>
+              </div>
+              <pre><code id="garalt" style="font-size: 20px;"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function doSomething() {
+        let input = Number(document.getElementById("year").value);
+        let result = "";
+
+        for (let k = 0; input > 0; k++) {
+          for (let i = 0; i < k + 1; i++) {
+            result = result + " *";
+          }
+
+          result = result + "\n";
+        }
+
+        document.getElementById("garalt").innerText = result;
+
+        //   for (let k = input - 1; k >= 0; k--) {
+
+        //     for (let i = 0; i < input - k; i++) {
+
+        //       result = result + " *";
+        //     }
+
+        //     result = result + "\n";
+
+        // }
+      }
+    </script>
+  </body>
+</html>
