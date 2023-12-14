@@ -46,8 +46,8 @@
         let input = Number(document.getElementById("year").value);
         let result = "";
 
-        for (let k = input - 1; k >= 0; k--) {
-          for (let i = 0; i < input - k; i++) {
+        for (let k = 0; input > 0; k++) {
+          for (let i = 0; i < k + 1; i++) {
             result = result + " *";
           }
 
@@ -55,6 +55,17 @@
         }
 
         document.getElementById("garalt").innerText = result;
+
+        //   for (let k = input - 1; k >= 0; k--) {
+
+        //     for (let i = 0; i < input - k; i++) {
+
+        //       result = result + " *";
+        //     }
+
+        //     result = result + "\n";
+
+        // }
       }
     </script>
   </body>
