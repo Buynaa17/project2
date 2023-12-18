@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html
+  class="has-background-link-light"
+  xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div
+            class="is-flex is-flex-direction-column is-justify-content-center"
+            style="height: 100vh"
+          >
+            <div class="box">
+              <div class="is-flex mb-4">
+                <input
+                  id="year"
+                  class="input is-large"
+                  type="text"
+                  placeholder="year"
+                />
+
+                <button
+                  class="button is-primary is-large"
+                  onclick="doSomething();"
+                >
+                  Бодох
+                </button>
+              </div>
+              <pre><code id="garalt" style="font-size: 20px;"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function doSomething() {
+        let input = Number(document.getElementById("year").value);
+        let result = "";
+        //    *
+        //    * *
+        //    * * *
+        //    * * * *
+        //    * * * * *
+
+        // for (let k = 0; k < input; k++) {
+        //   for (let l = 0; l < k + 1; l++) {
+        //     result = result + "* ";
+        //   }
+        //   for (let h = 0; h < input - k - 1; h++) {
+        //     result = result + "+ ";
+        //   }
+
+        //   result = result + "\n";
+        // }
+
+        // 2)
+        //    * * * * *
+        //    * * * *
+        //    * * *
+        //    * *
+        //    *
+
+        // for (let k = 0; k < input; k++) {
+        //   for (let l = 0; l < input - k; l++) {
+        //     result = result + "* ";
+        //   }
+
+        //   result = result + "\n";
+        // }
+
+        // 3)
+        //    * * * * *
+        //      * * * *
+        //        * * *
+        //          * *
+        //            *
+
+        // for (let k = 0; k < input; k++) {
+        //   for (let l = 0; l < k + 1; l++) {
+        //     result = result + "  ";
+        //   }
+        //   for (let h = 0; h < input - k - 1; h++) {
+        //     result = result + "* ";
+        //   }
+
+        //   result = result + "\n";
+        // }
+
+        //           4)
+        //            *
+        //          * *
+        //        * * *
+        //      * * * *
+        //    * * * * *
+
+        for (let k = 0; k < input; k++) {
+          for (let l = 0; l < input - k - 1; l++) {
+            result = result + "  ";
+          }
+          for (let h = 0; h < k + 1; h++) {
+            result = result + "* ";
+          }
+
+          result = result + "\n";
+        }
+
+        document.getElementById("garalt").innerText = result;
+      }
+    </script>
+  </body>
+</html>

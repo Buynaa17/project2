@@ -43,14 +43,21 @@
 
     <script>
       function doSomething() {
-        const input = document.getElementById("year").value;
-        const i = input === Date("2000 - 7 - 14");
+        let input = Number(document.getElementById("year").value);
+        let result = "";
 
-        // result = "";
-        // if (i) {
-        //   result = Date();
-        //   console.log(result);
-        // }
+        for (let k = 0; k < input; k++) {
+          for (let h = 0; h < input - k - 1; h++) {
+            result = result + " ";
+          }
+
+          for (let l = 0; l < k + 1; l++) {
+            result = result + "* ";
+          }
+
+          result = result + "\n";
+        }
+
         document.getElementById("garalt").innerText = result;
       }
     </script>

@@ -45,17 +45,28 @@
       function doSomething() {
         let input = Number(document.getElementById("year").value);
         let result = "";
-        for (let k = orolt - 1; k > 0; k--) {
-          for (let i = 0; input > 0; i++) {
-            result = result + "*";
-          }
-          for (let l = 0; l < input - k; l++) {
-            result = result + "-";
+
+        for (let k = 0; k < input; k++) {
+          for (let i = 0; i < input - 1 - k; i++) {
+            result = result + " ";
           }
 
+          if (k == 0) {
+            result = result + "* ";
+          } else if (k == input - 1) {
+            for (let i = 0; i < input; i++) {
+              result = result + "* ";
+            }
+          } else {
+            result = result + "* ";
+            for (let i = 0; i < k - 1; i++) {
+              result = result + "  ";
+            }
+
+            result = result + "* ";
+          }
           result = result + "\n";
         }
-
         document.getElementById("garalt").innerText = result;
       }
     </script>

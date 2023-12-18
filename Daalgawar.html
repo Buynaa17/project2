@@ -26,6 +26,12 @@
                   type="text"
                   placeholder="year"
                 />
+                <input
+                  id="orolt"
+                  class="input is-large"
+                  type="text"
+                  placeholder="orolt"
+                />
 
                 <button
                   class="button is-primary is-large"
@@ -34,7 +40,8 @@
                   Бодох
                 </button>
               </div>
-              <pre><code id="garalt" style="font-size: 20px;"></code></pre>
+              <pre>Нэмсэн үр дүн<div id="garalt" style="font-size: 20px;"></div></pre>
+              <pre>Хассан үр дүн<div id="garalt1" style="font-size: 20px;"></div></pre>
             </div>
           </div>
         </div>
@@ -43,15 +50,28 @@
 
     <script>
       function doSomething() {
-        const input = document.getElementById("year").value;
-        const i = input === Date("2000 - 7 - 14");
+        const input1 = Number(document.getElementById("orolt").value);
+        const input = Number(document.getElementById("year").value);
 
-        // result = "";
-        // if (i) {
-        //   result = Date();
-        //   console.log(result);
-        // }
+        result = 0;
+
+        if (input + input1) {
+          result = input + input1;
+        }
+        if (input1 - input) {
+          result1 = input1 - input;
+          if (input - input1) {
+            result1 = input - input1;
+          }
+        }
+        if (input == input1) {
+          result1 = 0;
+        }
+
+        console.log(result1);
+
         document.getElementById("garalt").innerText = result;
+        document.getElementById("garalt1").innerText = result1;
       }
     </script>
   </body>
