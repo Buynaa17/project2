@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Project1.css" />
+  </head>
+  <body>
+    <div class="board">
+      <div class="list">
+        <div class="todoTasks">
+          <div class="task">Shalaa ugaah</div>
+          <div class="task">Toosoo archih</div>
+        </div>
+        <button onclick="showModal()">Add task</button>
+      </div>
+      <div class="list">
+        <div class="">
+          <div class="task">Shalaa ugaah</div>
+          <div class="task">Toosoo archih</div>
+        </div>
+        <button onclick="showModal()">Add task</button>
+      </div>
+      <div class="list">
+        <div>
+          <div class="task">Shalaa ugaah</div>
+          <div class="task">Toosoo archih</div>
+        </div>
+        <button onclick="showModal()">Add task</button>
+      </div>
+      <div class="list">
+        <div>
+          <div class="task">Shalaa ugaah</div>
+          <div class="task">Toosoo archih</div>
+        </div>
+        <button onclick="showModal()">Add task</button>
+      </div>
+    </div>
+
+    <div class="modal" id="createModal">
+      <div class="modal-bg" onclick="hideModal()"></div>
+      <div class="modal-content">
+        <h2>Hello</h2>
+        <label for="input"><p>Title</p></label>
+        <div class="box">
+          <input id="input" type="text" style="height: 30px; width: 20vw" />
+        </div>
+        <label for="input1"><h4>Description</h4> </label>
+
+        <div class="box1">
+          <input id="input1" type="text" style="height: 60px; width: 20vw" />
+        </div>
+        <h4>Status</h4>
+        <div class="box2">
+          <input type="text" style="height: 30px; width: 20vw" />
+        </div>
+        <h4>Priroty</h4>
+        <div class="box3">
+          <input type="text" style="height: 30px; width: 20vw" />
+        </div>
+        <button onclick="modul()">Add task</button>
+        <button onclick="hideModal()">Close</button>
+      </div>
+    </div>
+  </body>
+  <script src="./project.js"></script>
+</html>
