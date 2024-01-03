@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const names = ["dorj", "bat", "bayraa", "zulaa"];
+      names.sort();
+      console.log(names);
+
+      const numbers = [10, 26, 5, 78, 9];
+      numbers.sort(compare);
+
+      function compare(a, b) {
+        return a - b;
+      }
+      console.log(numbers);
+
+      const array = [
+        { priority: "medium", value: "task 1" },
+        { priority: "low", value: "task 2" },
+        { priority: "medium", value: "task 3" },
+        { priority: "high", value: "task 4" },
+        { priority: "low", value: "task 5" },
+        { priority: "high", value: "task 6" },
+      ];
+      const order = { high: 1, medium: 2, low: 3 };
+      const sortedArray = array.sort((a, b) => {
+        return order[a.priority] - order[b.priority];
+      });
+      console.log(sortedArray);
+    </script>
+  </body>
+</html>

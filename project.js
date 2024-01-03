@@ -10,16 +10,16 @@ function hideModal() {
 }
 
 function modul() {
-  const title = document.getElementById("input").value;
+  const Title = document.getElementById("input").value;
   const Description = document.getElementById("input1").value;
 
-  const tastHtml = `<div class="task"> ${title} (${Description}) </div>`;
+  const tastHtml = `<div class="task"> ${Title} ${Description} </div>`;
   const todoElement = document.getElementsByClassName("todoTasks").value;
   todoElement.innerHTML = "tastHtml";
-  //   todoElement.append(tastHtml);
-  //   todoElement.innerHTML = todoElement.innerHTML + tastHtml;
-  //   hideModal();
-  //   resetForm();
+  todoElement.append(tastHtml);
+  todoElement.innerHTML = todoElement.innerHTML + tastHtml;
+  hideModal();
+  resetForm();
 }
 function resetForm() {
   document.getElementById("input").value = "";
