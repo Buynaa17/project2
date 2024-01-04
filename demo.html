@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <input id="newTask" />
+    <button onclick="addTask()">add task</button>
+    <div id="tasks">
+      <!-- generated -->
+    </div>
+
+    <script>
+      const tasks = [
+        {
+          name: "Aygal ugaah",
+          status: "Done",
+        },
+        {
+          name: "Hog shuurdeh",
+          status: "Done",
+        },
+        {
+          name: "Toos archih",
+          status: "Done",
+        },
+        {
+          name: "Toos soruulah",
+          status: "inprogress",
+        },
+      ];
+
+      function render() {
+        const tasksElement = document.getElementById("tasks");
+        let result = ``;
+
+        for (let i = 0; i < tasks.length; i++) {
+          const task = tasks[i];
+          const taskHtml = `<div>
+                                        <span>${task.status}:</span>
+                                        ${task.name}
+                                      </div>`;
+
+          result = result + taskHtml;
+        }
+
+        tasksElement.innerHTML = result;
+      }
+
+      function addTask() {
+        const name = document.getElementById("newTask").value;
+        tasks.push({ name: name, status: "new" });
+        document.getElementById("newTask").value = "";
+        render();
+      }
+
+      render();
+    </script>
+  </body>
+</html>

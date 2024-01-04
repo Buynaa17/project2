@@ -9,33 +9,38 @@ function hideModal() {
   modal.style.display = "none";
 }
 
-function modul() {
-  const Title = document.getElementById("input").value;
-  const Description = document.getElementById("input1").value;
-
-  const tastHtml = `<div class="task"> ${Title} ${Description} </div>`;
-  const todoElement = document.getElementsByClassName("todoTasks").value;
-  todoElement.innerHTML = "tastHtml";
-  todoElement.append(tastHtml);
-  todoElement.innerHTML = todoElement.innerHTML + tastHtml;
-  hideModal();
-  resetForm();
-}
-function resetForm() {
-  document.getElementById("input").value = "";
-  document.getElementById("input1").value = "";
-}
-
-// const Box = document.getElementsByClassName("box")[0].value;
-// const Box1 = document.getElementsByClassName("box1")[0].value;
-// const Box2 = document.getElementsByClassName("box2")[0].value;
-// const Box3 = document.getElementsByClassName("box3")[0].value;
-// const boxs = document.getElementById("button").value;
-
-// function myFunc() {
-//   console.log(Box.children[0]);
-//   console.log(Box1);
-//   console.log(Box2);
-//   console.log(Box3);
+// function resetForm() {
+//   document.getElementById("input").value = "";
+//   document.getElementById("input1").value = "";
 // }
-// boxs.onclick = myFunc;
+const input = [
+  {
+
+  },
+]
+
+Render () {
+  const Title = document.getElementById("input");
+  console.log(Title);
+  // const Description = document.getElementById("input1");
+  for (let i = 0; i < input.lenght; i++) {
+const input = input[i]
+
+  }
+
+}
+
+// function Addtask() {
+//   let CurrentT;
+//   const Title = document.getElementById("input").value;
+//   const Description = document.getElementById("input1").value;
+//   const Priority = document.getElementById("TodoPriority").value;
+//   const Status = document.getElementById("TodoStatus").value;
+//   const tastHtml = `<div class="task">${Status}: ${Priority}: ${Title} (${Description}) </div>`;
+//   const todoElement = document.getElementsByClassName("todoTasks").value;
+//   todoElement.innerHTML = "tastHtml";
+//   todoElement.append(tastHtml);
+//   todoElement.innerHTML = todoElement.innerHTML + tastHtml;
+//   hideModal();
+//   resetForm();
+// }
