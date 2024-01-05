@@ -7,30 +7,30 @@
   <body>
     <div class="board">
       <div class="list">
-        <div class="todoTasks">
-          <div class="task">Shalaa ugaah</div>
-          <div class="task">Toosoo archih</div>
+        <div class="todoTasks" id="Box">
+          <div class="tasks">Shalaa ugaah</div>
+          <div class="tasks">Toosoo archih</div>
         </div>
         <button onclick="showModal()">Add task</button>
       </div>
       <div class="list">
         <div>
-          <div class="task">Shalaa ugaah</div>
-          <div class="task">Toosoo archih</div>
+          <div class="tasks">Shalaa ugaah</div>
+          <div class="tasks">Toosoo archih</div>
         </div>
         <button onclick="showModal()">Add task</button>
       </div>
       <div class="list">
         <div>
-          <div class="task">Shalaa ugaah</div>
-          <div class="task">Toosoo archih</div>
+          <div class="tasks">Shalaa ugaah</div>
+          <div class="tasks">Toosoo archih</div>
         </div>
         <button onclick="showModal()">Add task</button>
       </div>
       <div class="list">
         <div>
-          <div class="task">Shalaa ugaah</div>
-          <div class="task">Toosoo archih</div>
+          <div class="tasks">Shalaa ugaah</div>
+          <div class="tasks">Toosoo archih</div>
         </div>
         <button onclick="showModal()">Add task</button>
       </div>
@@ -40,15 +40,17 @@
       <div class="modal-bg" onclick="hideModal()"></div>
       <div class="modal-content">
         <h2>Hello</h2>
-        <div>
-          <label for="input"><p>Title</p></label>
-          <input id="input" type="text" style="height: 30px; width: 20vw" />
+        <!-- // 1 -->
+        <div id="Title">
+          <label for="Title"><p>Title</p></label>
+          <input id="titleCss" type="text" style="height: 30px; width: 20vw" />
         </div>
         <!-- // 1 -->
-        <div id="input">
-          <label for="input1"><h4>Description</h4> </label>
 
-          <input id="input" type="text" style="height: 30px; width: 20vw" />
+        <!-- // 2 -->
+        <div id="Desc">
+          <label for="Desc"><h4>Description</h4> </label>
+          <input id="descCss" type="text" style="height: 30px; width: 20vw" />
         </div>
         <!-- // 2 -->
         <div id="input1">
@@ -69,7 +71,7 @@
             <option value="">high</option>
           </select>
         </div>
-        <button onclick="Addtask()">Add task</button>
+        <button onclick="addTask()" type="submit">Add task</button>
         <button onclick="hideModal()">Close</button>
       </div>
     </div>
