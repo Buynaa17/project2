@@ -1,0 +1,172 @@
+<head>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="board">
+      <div class="list">
+        <p class="board-header">Todo</p>
+        <div id="todoTasks">
+          <div class="task">Shalaa ugaah</div>
+          <div class="task">Toosoo archih</div>
+          <!-- auto generated tasks -->
+        </div>
+        <button onclick="showModal('todoTasks')">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="10"
+            width="10"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+            /> </svg>
+         
+         
+          <p>Add task</p>  
+        </button>
+      </div>
+      <div class="list">
+        <p class="board-header">In Progress</p>
+        <div id="inprogressTasks">
+          <!-- auto generated tasks -->
+        </div>
+        <button onclick="showModal('todoTasks')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="10"
+              width="10"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+              />
+            </svg>
+            <p>Add task</p>
+          </button>
+        </div>
+        <div class="list">
+          <p class="board-header">Stuck</p>
+          <div id="stuckTasks">
+            <!-- auto generated tasks -->
+          </div>
+          <button onclick="showModal('todoTasks')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="10"
+              width="10"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+              />
+            </svg>
+            <p>Add task</p>
+          </button>
+        </div>
+        <div class="list">
+          <p class="board-header">Done</p>
+          <div id="doneTasks">
+            <!-- auto generated tasks -->
+          </div>
+          <button onclick="showModal('todoTasks')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="10"
+              width="10"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+              />
+            </svg>
+            <p>Add task</p>
+          </button>
+        </div>
+      </div>
+  
+      <div class="modal" id="createModal">
+        <div class="modal-bg" onclick="hideModal()"></div>
+        <div class="modal-content">
+          <div>
+            <h1>Add task</h1>
+            <label for="taskTitle">Title</label>
+            <br />
+            <input id="taskTitle" />
+          </div>
+          <div>
+            <label for="taskDescription">Description</label>
+            <br />
+            <textarea id="taskDescription"></textarea>
+          </div>
+          <div>
+            <label for="taskPriority">Priority</label>
+            <br />
+            <select id="taskPriority">
+              <option>low</option>
+              <option>medium</option>
+              <option>high</option>
+              <option>urgent</option>
+            </select>
+          </div>
+          <div>
+            <label for="taskStatus">Status</label>
+            <br />
+            <select id="taskStatus">
+              <option value="todoTasks">Todo</option>
+              <option value="inprogressTasks">In Progress</option>
+              <option value="stuckTasks">Stuck</option>
+              <option value="doneTasks">Done</option>
+            </select>
+          </div>
+          <button onclick="addTask()">Add task</button>
+          <button onclick="hideModal()">Close</button>
+        </div>
+      </div>
+   
+    <script>
+      let currentTarget = "todoTasks";
+      let generatedId = 0;
+  
+      function addTask() {
+        const title = document.getElementById("taskTitle").value;
+        const description = document.getElementById("taskDescription").value;
+        const priority = document.getElementById("taskPriority").value;
+        generatedId++;
+        const taskHtml = `
+                <div class="task" id="task-${generatedId}">
+                    <span>${priority}</span>
+                    <h1>${title}</h1>
+<h1>${title}</h1>
+                </div>
+                `;
+                const todoElement = document.getElementById(currentTarget);
+                todoElement.innerHTML = todoElement.innerHTML + taskHtml;
+
+                hideModal();
+      resetForm();
+    }
+    function removeTask(taskId) {
+      document.getElementById(taskId).remove();
+    }
+    function resetForm() {
+      document.getElementById("taskTitle").value = "";
+      document.getElementById("taskDescription").value = "";
+    }
+    function showModal(targetId) {
+      const modal = document.querySelector("#createModal");
+      modal.style.display = "flex";
+      currentTarget = targetId;
+    }
+    function hideModal() {
+      const modal = document.getElementById("createModal");
+      modal.style.display = "none";
+    }
+  </script>
+   </body>
+</html>
