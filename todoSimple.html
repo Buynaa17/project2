@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+      .list {
+        background-color: gray;
+        max-width: 400px;
+        padding: 10px;
+        margin: auto;
+        border-radius: 20px;
+      }
+
+      .task {
+        margin-bottom: 10px;
+        background-color: white;
+        padding: 10px;
+      }
+      .task {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="list">
+      <h2>Todo list</h2>
+      <div class="tasks" id="taskElement">
+        <div class="task"></div>
+        <div class="task"></div>
+      </div>
+      <button onclick="addTask();">Add tasks</button>
+    </div>
+    <script>
+      tasks = [
+        { name: "Shalaa ugaahaasdaa" },
+        { name: "Hogoo shuurdehees" },
+        { name: "Aygaa ugaah" },
+      ];
+      function render() {
+        let taskHtml = ``;
+        let = index = 0;
+
+        while (tasks.length > index) {
+          taskHtml =
+            taskHtml +
+            `<div class="task" >${tasks[index].name}
+            <button onclick="removeTask(${index});">X</button>
+            </div>
+          `;
+          index = index + 1;
+        }
+        document.getElementById("taskElement").innerHTML = taskHtml;
+      }
+      function removeTask(deleteindex) {
+        const deleteConfirm = confirm("Ustgah uu?");
+        console.log(deleteConfirm);
+        if (deleteindex) {
+          tasks.splite(deleteConfirm, 1);
+          render();
+        }
+      }
+      function addTask() {
+        const name = prompt("Task oruulna uu?:");
+        tasks.push({ name: name });
+        render();
+      }
+      render();
+      //   let taskHtm = ``;
+      //   taskHtml = taskHtml + `<div class="task" >${tasks[0].name}</div>`;
+      //   taskHtml = taskHtml + `<div class="task" >${tasks[1].name}</div>`;
+      //   taskHtml = taskHtml + `<div class="task" >${tasks[2].name}</div>`;
+
+      //   const taskHtml = `<div class="task" >${tasks[0].name}</div>
+      //                     <div class="task" >${tasks[1].name}</div>
+      //                     <div class="task" >${tasks[2].name}</div>`;
+    </script>
+  </body>
+</html>

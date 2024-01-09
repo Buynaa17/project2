@@ -21,7 +21,7 @@ function renderTask() {
     const task = task[i];
 
     const taskHtml = `<div>
-    ${task.title}, ${Desc}, ${Priority}
+    ${task.title}, ${task.Desc}, ${task.Priority}
     <button onclick=" removeTask(${i})">remove</button>
     </div>
     `;
