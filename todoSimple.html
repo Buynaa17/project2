@@ -25,6 +25,9 @@
         display: flex;
         justify-content: space-between;
       }
+      .task > span {
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -50,6 +53,7 @@
           taskHtml =
             taskHtml +
             `<div class="task" >${tasks[index].name}
+              <span onclick ="editindex(${index});">${tasks[index].name}</span>
             <button onclick="removeTask(${index});">X</button>
             </div>
           `;
@@ -59,9 +63,8 @@
       }
       function removeTask(deleteindex) {
         const deleteConfirm = confirm("Ustgah uu?");
-        console.log(deleteConfirm);
-        if (deleteindex) {
-          tasks.splite(deleteConfirm, 1);
+        if (deleteConfirm) {
+          tasks.splice(deleteindex, 1);
           render();
         }
       }
@@ -69,6 +72,9 @@
         const name = prompt("Task oruulna uu?:");
         tasks.push({ name: name });
         render();
+      }
+      function editTask(editindex) {
+        console.log({ editTask });
       }
       render();
       //   let taskHtm = ``;
