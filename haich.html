@@ -36,6 +36,7 @@
         margin: 5px;
         cursor: pointer;
         margin: auto;
+        margin-top: 20px;
       }
 
       #reset-btn {
@@ -89,7 +90,12 @@
           ✂️ Scissors
         </button>
       </div>
-      <button id="reset-btn" class="btn" onclick="resetform">Reset Game</button>
+
+      <div>
+        <button id="reset-btn" class="btn" onclick="resetform">
+          Reset Game
+        </button>
+      </div>
       <div id="score"></div>
     </div>
 
@@ -98,6 +104,7 @@
       const computerChoiceElement = document.querySelector("#computerChoise");
       const scoreOr = document.querySelector("#score");
       const resetButton = document.querySelector("#reset-btn");
+      const moveButtons = document.querySelector(".move");
 
       let playerScore = 0;
       let computerScore = 0;
@@ -133,12 +140,27 @@
           computerScore++;
           console.log("computer win");
         }
+        checkGameEnd();
         scoreTotal();
       }
       function resetform() {
+        console.log("hi");
         document.querySelector("#playerChoise").value = "";
         document.querySelector("#computerChoise").value = "";
+        scoreOr.innerText = `player: 0 | computer: 0`;
+        let playerScore = 0;
+        let computerScore = 0;
       }
+
+      function checkGameEnd() {
+        if (playerScore === winnerScore || computerScore === winnerScore) {
+          console.log("end game");
+        }
+        for (let i = 0; i < moveButtons.length; i++) {
+          moveButtons[i].disabled = true;
+        }
+      }
+      checkGameEnd();
     </script>
   </body>
 </html>
