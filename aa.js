@@ -4,7 +4,7 @@
 
       const inventors = [
 
-        {​​​​​ first: "Albert", last: "Einstein", year: 1879, passed: 1955 }​​​​​,
+      {​​ first: "Albert", last: "Einstein", year: 1879, passed: 1955 }​​​​​,
 
         {​​​​​ first: "Isaac", last: "Newton", year: 1643, passed: 1727 }​​​​​,
 
@@ -34,12 +34,15 @@
 
       // 1. Filter the list of inventors for those who were born in the 1500's
 
-      function on(number) {
-           
-          }
-          const newNumber = numbers.map(multByTwo);
-          console.log(newNumber);
- 
+      function longName() {
+        if (inventors.length <= 1500 && inventors.length > 1600) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      const result = names.filter(longName);
+      console.log(result);
       // Array.map()
 
       // 2. Give us an array of the inventors first and last names
