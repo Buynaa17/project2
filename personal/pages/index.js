@@ -17,6 +17,7 @@ export default function Home() {
               responsive. Even though I have been creating web applications for
               over 7 years, I still love it as if it was something new.
             </p>
+
             <Footer />
           </div>
         </div>
