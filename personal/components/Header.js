@@ -1,24 +1,25 @@
 import { Logo } from "./Icons/Logo";
-import { Menuitems } from "./Menuitems";
+import { MainMenu } from "./MainMenu";
 import { Button } from "./button/Button";
 import { Menu } from "./menu/Menu";
 import { Icon } from "./sun icon/Icon";
+import { menuitems } from "./data/menuItems";
 
 export function Header() {
-  const menuitems = [
-    { label: "About", link: "/about" },
-    { label: "Work", link: "/work" },
-    { label: "Test", link: "/test" },
-    { label: "Contact", link: "/contact" },
-  ];
   return (
-    <div className="hidden sm:flex bolrder-2  p-4">
-      <div className="flex justify-between ">
+    <div className="flex justify-between bolrder-2  p-4">
+      <div className="">
         <Logo />
-        <div className="flex  justify-between">
+      </div>
+      <div className="flex">
+        <div className="flex sm:hidden">
           <Menu />
-          <Menuitems items={menuitems} />
-          <Icon />
+        </div>
+        <div className=" hidden sm:flex">
+          <MainMenu items={menuitems} />
+          <div className=" mt-2 ml-2 mr-2">
+            <Icon />
+          </div>
           <Button />
         </div>
       </div>
