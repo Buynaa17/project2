@@ -4,8 +4,7 @@ import { Body } from "@/components/Body";
 import { Actions } from "@/components/Actions";
 import { Container } from "@/components/Container";
 import { Chip } from "@/components/work/Chip";
-import { Skills } from "@/components/Skills";
-
+import { Skills } from "@/components/sun icon/Skillss";
 export default function Home() {
   return (
     <div>
