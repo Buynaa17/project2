@@ -5,6 +5,8 @@ import { Actions } from "@/components/Actions";
 import { Container } from "@/components/Container";
 import { Chip } from "@/components/work/Chip";
 import { Skills } from "@/components/sun icon/Skillss";
+
+import { SkillIcon } from "@/components/sun icon/SkillIcon";
 export default function Home() {
   return (
     <div>
@@ -43,6 +45,10 @@ export default function Home() {
       <div>
         <Skills />
       </div>
+      <div>
+        <SkillIcon />
+      </div>
     </div>
   );
+  s;
 }
