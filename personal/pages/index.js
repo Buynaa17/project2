@@ -5,8 +5,8 @@ import { Actions } from "@/components/Actions";
 import { Container } from "@/components/Container";
 import { Chip } from "@/components/work/Chip";
 import { Skills } from "@/components/sun icon/Skillss";
-
 import { SkillIcon } from "@/components/sun icon/SkillIcon";
+
 export default function Home() {
   return (
     <div>
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </div>
       <Container />
-      <Footer />
+
       <div className="flex flex-col gap-2  items-center justify-center">
         <Chip label={"Skills"} />
       </div>
@@ -47,6 +47,7 @@ export default function Home() {
       </div>
       <div>
         <SkillIcon />
+        <Footer />
       </div>
     </div>
   );

@@ -2,8 +2,8 @@ import { Logo } from "./Icons/Logo";
 import { MainMenu } from "./MainMenu";
 import { Button } from "./button/Button";
 import { Menu } from "./menu/Menu";
-import { Icon } from "./sun icon/Icon";
 import { menuitems } from "./data/menuItems";
+import { ThemeChanger } from "./Icons/Themechanger";
 
 export function Header() {
   return (
@@ -14,12 +14,11 @@ export function Header() {
       <div className="flex">
         <div className="flex sm:hidden">
           <Menu />
-        </div>
+        </div>{" "}
+        <ThemeChanger />
         <div className=" hidden sm:flex">
           <MainMenu items={menuitems} />
-          <div className=" mt-2 ml-2 mr-2">
-            <Icon />
-          </div>
+
           <Button />
         </div>
       </div>
