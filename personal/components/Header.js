@@ -3,7 +3,7 @@ import { MainMenu } from "./MainMenu";
 import { Button } from "./button/Button";
 import { Menu } from "./menu/Menu";
 import { menuitems } from "./data/menuItems";
-import { ThemeChanger } from "./Icons/Themechanger";
+// import { ThemeChanger } from "./Icons/Themechanger";
 
 export function Header() {
   return (
@@ -15,7 +15,7 @@ export function Header() {
         <div className="flex sm:hidden">
           <Menu />
         </div>{" "}
-        <ThemeChanger />
+        {/* <ThemeChanger /> */}
         <div className=" hidden sm:flex">
           <MainMenu items={menuitems} />
 
